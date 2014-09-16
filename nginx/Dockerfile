@@ -8,4 +8,4 @@ VOLUME ["/etc/nginx", "/var/log/nginx", "/usr/share/nginx/html"]
 
 EXPOSE 80
 
-CMD ["nginx", "-c", "/etc/nginx/nginx.conf", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"]

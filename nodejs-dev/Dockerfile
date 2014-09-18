@@ -1,6 +1,6 @@
 FROM plause/nodejs
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get -y upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git
 RUN apt-get clean && rm /var/lib/apt/lists/* -rf
 

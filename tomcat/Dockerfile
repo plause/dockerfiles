@@ -2,10 +2,11 @@ FROM plause/java
 
 RUN apt-get update && apt-get -y upgrade
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y tomcat7
-RUN apt-get clean && rm /var/lib/apt/lists/* -rf
 
 ENV CATALINA_BASE /var/lib/tomcat7
-ENV CATALINA_TMPDIR /tmp
+
+RUN mkdir $CATALINA_BASE/temp && chown tomcat7:tomcat7 $CATALINA_BASE/temp
+RUN apt-get clean && rm /var/lib/apt/lists/* -rf
 
 USER tomcat7
 

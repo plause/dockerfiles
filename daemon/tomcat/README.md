@@ -4,10 +4,10 @@ Build a docker image for Apache Tomcat.
 
 ### Build
 
-    docker build -t daemon/tomcat7 .
+    docker build -t daemon/tomcat .
 
 ### Usage
 
 #### Run a Web application:
 
-    docker run -d -v $(pwd)/app.war:/var/lib/tomcat7/webapps/app.war daemon/tomcat7
+    docker run -d -v $(pwd)/app.war:/var/lib/tomcat7/webapps/app.war daemon/tomcat

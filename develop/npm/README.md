@@ -1,13 +1,13 @@
-## NodeJS Development
+## NodeJS Package Manager
 
-Build a docker image for NodeJS Development.
+Build a docker image for NPM.
 
 ### Build
 
-    docker build -t develop/nodejs .
+    docker build -t develop/npm .
 
 ### Usage
 
 #### Install Packages declared in package.json:
 
-    docker run -it -v $(pwd):/work -w /work develop/nodejs install
+    docker run -v $(pwd):/work -w /work develop/npm install
